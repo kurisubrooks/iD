@@ -798,7 +798,7 @@ function writeFaIcons(faIcons) {
     const name = key.substring(4);
     const def = fontawesome.findIconDefinition({ prefix: prefix, iconName: name });
     try {
-      writeFileProm('svg/fontawesome/' + key + '.svg', fontawesome.icon(def).html);
+      writeFileProm('svg/fontawesome/' + key + '.svg', fontawesome.icon(def).html[0]);
     } catch (error) {
       console.error('Error: No FontAwesome icon for ' + key);
       throw (error);
